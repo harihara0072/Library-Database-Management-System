@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Member</title>
+</head>
+<body>
+
+<h2 align="center">Add a new Member</h2><br><br>
+
+<h3>Enter the details:</h3><br><br>
+<form id="new_member" action="/new_member" enctype="multipart/form-data" method="post">
+    Library Staff SSN:<br>
+    <input type="number" name="Lib_SSN" required><br>
+
+    Member SSN:<br>
+    <input type="number" name="Mem_SSN" required><br>
+
+    Member Name:<br>
+    <input type="text" name="Mem_Name" required><br>
+
+    Campus Address:<br>
+    <input type="text" name="Mem_Address" required><br>
+
+    Member Phone Number:<br>
+    <input type="number" name="Mem_Phone"><br>
+
+    <button type="submit" id="addmem_button">Submit</button>
+
+
+</form>
+
+<p>{{ result }}</p>
+</body>
+</html>

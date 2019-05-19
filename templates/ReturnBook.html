@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Return Book</title>
+</head>
+<body>
+
+<h2 align="center">Books Return</h2><br><br>
+
+<form id="Return_book" action="/return_this_book" enctype="multipart/form-data" method="post">
+
+    Library Staff SSN:<br>
+    <input type="number" name="Lib_SSN" required><br>
+
+    Book ISBN:<br>
+    <input type="number" name="book_ISBN" required><br>
+
+    Member ISBN:<br>
+    <input type="number" name="Mem_SSN" required><br><br>
+
+    <button type="submit" id="borrowbutton">Submit</button>
+
+</form>
+
+<p>{{ result }}</p>
+<p><b>ISBN:{{ isbn }}</b></p><br>
+<p><b>Author: </b>{{ author }}</p><br>
+<p><b>Borred Date:</b>{{ borred_date }}</p><br>
+<p><b>Returned Date:</b>{{ cur_date }}</p><br>
+
+<p><b>Days after due date:{{ days }}</b></p><br>
+
+</body>
+</html>

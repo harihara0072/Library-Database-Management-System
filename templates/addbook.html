@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Book</title>
+</head>
+<body>
+
+<h2 align="center">Add A new Book</h2><br><br>
+
+<h3>Enter the details:</h3><br><br>
+<form id="new_member" action="/add_new_book" enctype="multipart/form-data" method="post">
+    Library Staff SSN:<br>
+    <input type="number" name="Lib_SSN" required><br>
+
+    Book ISBN:<br>
+    <input type="number" name="book_ISBN" required><br>
+
+    Book Title:<br>
+    <input type="text" name="Book_Title" required><br>
+
+    Book Author:<br>
+    <input type="text" name="Book_Author" required><br>
+
+    Book Subject Area:<br>
+    <input type="text" name="Subj_Area"><br>
+
+    Language:<br>
+    <input type="text" name="lang" required><br>
+
+    Bind:<br>
+    <input type="text" name="bind"><br>
+
+    Description:<br>
+    <input type="text" name="description"><br>
+
+    <button type="submit" id="addbook_button">Submit</button>
+
+
+</form>
+
+<p>{{ result }}</p>
+</body>
+</html>

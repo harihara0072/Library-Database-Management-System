@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RenewMembership</title>
+</head>
+<body>
+
+<h2 align="center">Renew Membership</h2>
+
+<form id="renew_membership" action="/renew_membership" enctype="multipart/form-data" method="post">
+
+    Library Staff SSN:<br>
+    <input type="number" name="Lib_SSN" required><br>
+
+    Member SSN:<br>
+    <input type="number" name="Mem_SSN" required><br>
+
+    <button type="submit" id="borrowbutton">Submit</button>
+
+</form>
+
+<p>{{ result }}</p>
+</body>
+</html>

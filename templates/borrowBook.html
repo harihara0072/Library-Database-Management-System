@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrow Book</title>
+</head>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+    font-size: small;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<body>
+
+<h2 align="center">Books Catalog</h2>
+<table>
+
+
+<tr>
+    <td><b><p>ISBN</p></b></td>
+    <td><b><p>Title</p></b></td>
+    <td><b><p>Author</p></b></td>
+    <td><b><p>Subject_Area</p></b></td>
+    <td><b><p>Description</p></b></td>
+    <td><b><p>Language</p></b></td>
+</tr>
+
+                 {% for obj in total %}
+                <tr>
+                <td><p>{{ obj[0] }}</p></td>
+                <td><p>{{ obj[1] }}</p></td>
+                <td><p>{{ obj[2] }}</p></td>
+                <td><p>{{ obj[3] }} </p></td>
+                <td><p>{{ obj[4] }}</p></td>
+                <td><p>{{ obj[5] }} </p></td>
+                </tr>
+                 {% endfor %}
+</table><br><br>
+
+<h2>Enter the details of the Book to Borrow:</h2><br><br>
+
+<form id="borrow_book" action="/borrow_this_book" enctype="multipart/form-data" method="post">
+    Library Staff SSN:<br>
+    <input type="number" name="Lib_SSN" required><br>
+
+    Book ISBN:<br>
+    <input type="number" name="book_ISBN" required><br>
+
+    Member SSN:<br>
+    <input type="number" name="mem_SSN" required><br><br>
+
+    <button type="submit" id="borrowbutton">Submit</button>
+
+</form>
+
+<p><b>{{ result }}</b></p><br>
+
+
+</body>
+</html>

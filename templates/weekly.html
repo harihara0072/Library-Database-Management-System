@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Member</title>
+</head>
+<body>
+
+<h2 align="center">Add a new Member</h2><br><br>
+
+<h3>Enter the details:</h3><br><br>
+<form id="new_member" action="/get_weekly" enctype="multipart/form-data" method="post">
+    Enter the end Date:<br>
+    <input type="date" name="Date" required><br>
+
+    <button type="submit" id="addmem_button">Submit</button>
+
+
+</form>
+<table>
+
+
+<tr>
+    <td><b><p>ISBN</p></b></td>
+    <td><b><p>Issue_date</p></b></td>
+    <td><b><p>Return Date</p></b></td>
+    <td><b><p>Days loaned out:</p></b></td>
+</tr>
+{% for obj in out %}
+                <tr>
+                <td><p>{{ obj[0] }}</p></td>
+                <td><p>{{ obj[1] }}</p></td>
+                <td><p>{{ obj[2] }}</p></td>
+                <td><p>{{ obj[3] }} </p></td>
+                <td><p>{{ obj[4] }}</p></td>
+                </tr>
+                 {% endfor %}
+</table><br><br>
+
+<table>
+<tr>
+    <td><b><p>ISBN</p></b></td>
+    <td><b><p>Issue_date</p></b></td>
+    <td><b><p>Return Date</p></b></td>
+    <td><b><p>Days loaned out:</p></b></td>
+</tr>
+{% for obj in out %}
+                <tr>
+                <td><p>{{ obj[0] }}</p></td>
+                <td><p>{{ obj[3] }}</p></td>
+                <td><p>{{ obj[4] }}</p></td>
+                <td><p>{{ obj[6] }} </p></td>
+                </tr>
+                 {% endfor %}
+</table><br><br>
+</body>
+</html>
